@@ -1,0 +1,20 @@
+D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\Movie Ticket Management System.exe
+D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\Movie Ticket Management System.deps.json
+D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\Movie Ticket Management System.runtimeconfig.json
+D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\Movie Ticket Management System.dll
+D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\Movie Ticket Management System.pdb
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.AssemblyReference.cache
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form1.resources
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.GenerateResource.cache
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.GeneratedMSBuildEditorConfig.editorconfig
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.AssemblyInfoInputs.cache
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.AssemblyInfo.vb
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.CoreCompileInputs.cache
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.dll
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\refint\Movie Ticket Management System.dll
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.pdb
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.genruntimeconfig.cache
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\ref\Movie Ticket Management System.dll
+D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Resources.resources
+D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.CopyComplete
