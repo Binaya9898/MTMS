@@ -5,6 +5,7 @@
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles SignIn.Click
+        Register.Show()
 
     End Sub
 
@@ -25,6 +26,10 @@
     End Sub
 
     Private Sub IconPictureBox3_Click(sender As Object, e As EventArgs) Handles IconPictureBox3.Click
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
