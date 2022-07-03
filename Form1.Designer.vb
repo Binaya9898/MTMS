@@ -26,9 +26,9 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnLogin = New System.Windows.Forms.Button()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
+        Me.TxtUsername = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -71,9 +71,9 @@ Partial Class Form1
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Navy
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Controls.Add(Me.Button1)
+        Me.Panel3.Controls.Add(Me.BtnLogin)
+        Me.Panel3.Controls.Add(Me.TxtPassword)
+        Me.Panel3.Controls.Add(Me.TxtUsername)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
@@ -82,31 +82,31 @@ Partial Class Form1
         Me.Panel3.Size = New System.Drawing.Size(938, 654)
         Me.Panel3.TabIndex = 2
         '
-        'TextBox2
+        'BtnLogin
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Historic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox2.Location = New System.Drawing.Point(119, 342)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(358, 43)
-        Me.TextBox2.TabIndex = 6
-        Me.TextBox2.UseSystemPasswordChar = True
+        Me.BtnLogin.Location = New System.Drawing.Point(119, 459)
+        Me.BtnLogin.Name = "BtnLogin"
+        Me.BtnLogin.Size = New System.Drawing.Size(94, 29)
+        Me.BtnLogin.TabIndex = 7
+        Me.BtnLogin.Text = "Log IN"
+        Me.BtnLogin.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'TxtPassword
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Historic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(119, 201)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(358, 43)
-        Me.TextBox1.TabIndex = 5
+        Me.TxtPassword.Font = New System.Drawing.Font("Segoe UI Historic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtPassword.Location = New System.Drawing.Point(119, 342)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.Size = New System.Drawing.Size(358, 43)
+        Me.TxtPassword.TabIndex = 6
+        Me.TxtPassword.UseSystemPasswordChar = True
         '
-        'Button1
+        'TxtUsername
         '
-        Me.Button1.Location = New System.Drawing.Point(119, 428)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(179, 49)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TxtUsername.Font = New System.Drawing.Font("Segoe UI Historic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtUsername.Location = New System.Drawing.Point(119, 201)
+        Me.TxtUsername.Name = "TxtUsername"
+        Me.TxtUsername.Size = New System.Drawing.Size(358, 43)
+        Me.TxtUsername.TabIndex = 5
         '
         'Label7
         '
@@ -292,7 +292,6 @@ Partial Class Form1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel1 As Panel
@@ -303,6 +302,7 @@ Partial Class Form1
     Friend WithEvents IconPictureBox3 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents IconPictureBox2 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtPassword As TextBox
+    Friend WithEvents TxtUsername As TextBox
+    Friend WithEvents BtnLogin As Button
 End Class

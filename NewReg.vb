@@ -1,6 +1,10 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Module NewReg
-    Public Con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\New folder\Movie Ticket Management System\MovieDb.accdb; Persist Security Info=False")
-    Public Cmd As OleDbCommand
+    Public Sub DbCon()
+        Dim Con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
+        Dim Cmd As OleDbCommand
+        Con.Open()
+
+    End Sub
 End Module
