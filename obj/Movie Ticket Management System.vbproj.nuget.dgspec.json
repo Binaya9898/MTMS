@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\New folder\\Movie Ticket Management System\\Movie Ticket Management System.vbproj": {}
+    "D:\\Updated\\MTMS\\Movie Ticket Management System.vbproj": {}
   },
   "projects": {
-    "D:\\New folder\\Movie Ticket Management System\\Movie Ticket Management System.vbproj": {
+    "D:\\Updated\\MTMS\\Movie Ticket Management System.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder\\Movie Ticket Management System\\Movie Ticket Management System.vbproj",
+        "projectUniqueName": "D:\\Updated\\MTMS\\Movie Ticket Management System.vbproj",
         "projectName": "Movie Ticket Management System",
-        "projectPath": "D:\\New folder\\Movie Ticket Management System\\Movie Ticket Management System.vbproj",
+        "projectPath": "D:\\Updated\\MTMS\\Movie Ticket Management System.vbproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder\\Movie Ticket Management System\\obj\\",
+        "outputPath": "D:\\Updated\\MTMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

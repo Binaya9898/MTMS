@@ -149,7 +149,7 @@ Partial Class Form2
         '
         'SInsert
         '
-        Me.SInsert.Location = New System.Drawing.Point(437, 599)
+        Me.SInsert.Location = New System.Drawing.Point(203, 638)
         Me.SInsert.Name = "SInsert"
         Me.SInsert.Size = New System.Drawing.Size(94, 29)
         Me.SInsert.TabIndex = 6

@@ -23,3 +23,29 @@ D:\New folder\Movie Ticket Management System\bin\Debug\net6.0-windows\runtimes\w
 D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.AdminPannel.resources
 D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form2.resources
 D:\New folder\Movie Ticket Management System\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Movie1.resources
+D:\Updated\MTMS\bin\Debug\net6.0-windows\Movie Ticket Management System.exe
+D:\Updated\MTMS\bin\Debug\net6.0-windows\Movie Ticket Management System.deps.json
+D:\Updated\MTMS\bin\Debug\net6.0-windows\Movie Ticket Management System.runtimeconfig.json
+D:\Updated\MTMS\bin\Debug\net6.0-windows\Movie Ticket Management System.dll
+D:\Updated\MTMS\bin\Debug\net6.0-windows\Movie Ticket Management System.pdb
+D:\Updated\MTMS\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+D:\Updated\MTMS\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+D:\Updated\MTMS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.AssemblyReference.cache
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.AdminPannel.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form1.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form2.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Movie1.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Resources.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.GenerateResource.cache
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.GeneratedMSBuildEditorConfig.editorconfig
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.AssemblyInfoInputs.cache
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.AssemblyInfo.vb
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.CoreCompileInputs.cache
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.CopyComplete
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.dll
+D:\Updated\MTMS\obj\Debug\net6.0-windows\refint\Movie Ticket Management System.dll
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.pdb
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.genruntimeconfig.cache
+D:\Updated\MTMS\obj\Debug\net6.0-windows\ref\Movie Ticket Management System.dll
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.CRUD.resources

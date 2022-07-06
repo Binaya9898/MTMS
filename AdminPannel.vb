@@ -7,4 +7,12 @@
     Private Sub CreateUser_Click(sender As Object, e As EventArgs) Handles CreateUser.Click
         Form2.Show()
     End Sub
+
+    Private Sub UpdateUser_Click(sender As Object, e As EventArgs) Handles UpdateUser.Click
+
+    End Sub
+
+    Private Sub UpdateMovie_Click(sender As Object, e As EventArgs) Handles UpdateMovie.Click
+
+    End Sub
 End Class

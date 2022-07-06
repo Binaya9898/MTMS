@@ -96,9 +96,9 @@ Partial Class Form1
         Me.TxtPassword.Font = New System.Drawing.Font("Segoe UI Historic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtPassword.Location = New System.Drawing.Point(119, 342)
         Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPassword.Size = New System.Drawing.Size(358, 43)
         Me.TxtPassword.TabIndex = 6
-        Me.TxtPassword.UseSystemPasswordChar = True
         '
         'TxtUsername
         '
