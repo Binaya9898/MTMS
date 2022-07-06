@@ -9,10 +9,20 @@
     End Sub
 
     Private Sub UpdateUser_Click(sender As Object, e As EventArgs) Handles UpdateUser.Click
+        CRUD.show()
+
 
     End Sub
 
-    Private Sub UpdateMovie_Click(sender As Object, e As EventArgs) Handles UpdateMovie.Click
+
+
+    Private Sub DeleteUser_Click(sender As Object, e As EventArgs) Handles DeleteUser.Click
+
+
+    End Sub
+
+    Private Sub SearchUser_Click(sender As Object, e As EventArgs) Handles SearchUser.Click
+
 
     End Sub
 End Class

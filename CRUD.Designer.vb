@@ -29,6 +29,8 @@ Partial Class CRUD
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.Cid = New System.Windows.Forms.TextBox()
         Me.Cusername = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -51,7 +53,7 @@ Partial Class CRUD
         '
         'BtnSearch
         '
-        Me.BtnSearch.Location = New System.Drawing.Point(123, 518)
+        Me.BtnSearch.Location = New System.Drawing.Point(27, 330)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(94, 29)
         Me.BtnSearch.TabIndex = 2
@@ -60,7 +62,7 @@ Partial Class CRUD
         '
         'BtnUpdate
         '
-        Me.BtnUpdate.Location = New System.Drawing.Point(282, 518)
+        Me.BtnUpdate.Location = New System.Drawing.Point(183, 330)
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(94, 29)
         Me.BtnUpdate.TabIndex = 3
@@ -69,7 +71,7 @@ Partial Class CRUD
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(449, 526)
+        Me.BtnDelete.Location = New System.Drawing.Point(308, 330)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(94, 29)
         Me.BtnDelete.TabIndex = 4
@@ -90,11 +92,24 @@ Partial Class CRUD
         Me.Cusername.Size = New System.Drawing.Size(291, 27)
         Me.Cusername.TabIndex = 6
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(551, 31)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(788, 658)
+        Me.DataGridView1.TabIndex = 7
+        '
         'CRUD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1366, 768)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Cusername)
         Me.Controls.Add(Me.Cid)
         Me.Controls.Add(Me.BtnDelete)
@@ -104,6 +119,7 @@ Partial Class CRUD
         Me.Controls.Add(Me.Label1)
         Me.Name = "CRUD"
         Me.Text = "CRUD"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -120,5 +136,6 @@ Partial Class CRUD
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnDelete As Button
     Friend WithEvents Cid As TextBox
-    Friend WithEvents Cusername As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Public WithEvents Cusername As TextBox
 End Class
