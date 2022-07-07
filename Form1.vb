@@ -51,15 +51,21 @@ Public Class Form1
         myreader = cmd.ExecuteReader()
         myreader.Read()
         Dim Uname, pass As String
-        Uname = myreader("UserName")
-        pass = myreader("Password")
+        Try
 
-        If Uname = TxtUsername.Text And pass = TxtPassword.Text Then
-            AdminPannel.Show()
-        Else
-            MsgBox("Icorrect")
+            Uname = myreader("UserName")
+            pass = myreader("Password")
+            If Uname = TxtUsername.Text And pass = TxtPassword.Text Then
+                AdminPannel.Show()
+            End If
 
-        End If
+        Catch ex As Exception
+            MsgBox("Incorrect")
+        End Try
+
+
+
+
         conn.Close()
     End Sub
 

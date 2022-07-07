@@ -44,9 +44,9 @@ Partial Class Form2
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(544, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 38)
+        Me.Label1.Size = New System.Drawing.Size(234, 38)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "Create New User"
         '
         'Label2
         '
@@ -54,9 +54,9 @@ Partial Class Form2
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(18, 178)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 38)
+        Me.Label2.Size = New System.Drawing.Size(113, 38)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "User ID"
         '
         'Label3
         '
@@ -64,9 +64,9 @@ Partial Class Form2
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(18, 268)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 38)
+        Me.Label3.Size = New System.Drawing.Size(161, 38)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "User Name"
         '
         'Label4
         '
@@ -74,9 +74,9 @@ Partial Class Form2
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(18, 346)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 38)
+        Me.Label4.Size = New System.Drawing.Size(121, 38)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Label4"
+        Me.Label4.Text = "Address"
         '
         'Label5
         '
@@ -84,9 +84,9 @@ Partial Class Form2
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(18, 423)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 38)
+        Me.Label5.Size = New System.Drawing.Size(153, 38)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Label5"
+        Me.Label5.Text = "UserName"
         '
         'Panel1
         '
@@ -153,7 +153,7 @@ Partial Class Form2
         Me.SInsert.Name = "SInsert"
         Me.SInsert.Size = New System.Drawing.Size(94, 29)
         Me.SInsert.TabIndex = 6
-        Me.SInsert.Text = "Button1"
+        Me.SInsert.Text = "Insert"
         Me.SInsert.UseVisualStyleBackColor = True
         '
         'Label6
@@ -162,9 +162,9 @@ Partial Class Form2
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(18, 536)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(102, 38)
+        Me.Label6.Size = New System.Drawing.Size(139, 38)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Label6"
+        Me.Label6.Text = "Password"
         '
         'Form2
         '

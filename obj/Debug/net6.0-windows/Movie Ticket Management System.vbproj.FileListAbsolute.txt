@@ -49,3 +49,4 @@ D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.pdb
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.genruntimeconfig.cache
 D:\Updated\MTMS\obj\Debug\net6.0-windows\ref\Movie Ticket Management System.dll
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.CRUD.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form3.resources

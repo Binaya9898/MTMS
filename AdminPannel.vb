@@ -14,18 +14,8 @@
 
 
 
-    Private Sub DeleteUser_Click(sender As Object, e As EventArgs) Handles DeleteUser.Click
-        crud.Show()
 
 
-    End Sub
-
-    Private Sub SearchUser_Click(sender As Object, e As EventArgs) Handles SearchUser.Click
-
-        crud.Show()
-
-
-    End Sub
 
     Private Sub UpdateUser_Click(sender As Object, e As EventArgs) Handles UpdateUser.Click
         crud.Show()

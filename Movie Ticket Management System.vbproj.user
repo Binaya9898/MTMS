@@ -13,6 +13,9 @@
     <Compile Update="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Movie1.vb">
       <SubType>Form</SubType>
     </Compile>

@@ -32,20 +32,23 @@ Public Class crud
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        Dim strqry As String
+
         Dim conn As OleDbConnection = New OleDbConnection()
+        Dim oledbAdapter As New OleDbDataAdapter
+        Dim da As New OleDbDataAdapter
+        Dim strqry As String
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
-        If conn.State = ConnectionState.Open Then
-            conn.Close()
-        End If
-        'Get id of tuple you want to delete record of
-        strqry = "delete from from Userinfo where UserName='" & Cusername.Text & "' "
-        cmd.CommandText = strqry
-        conn.Open()
-        cmd.ExecuteNonQuery()
-        conn.Close()
-        MsgBox("Data Deleted Successfully!")
-        Datashow()
+
+        strqry = "delete * from Userinfo where UserName='" & Cusername.Text & "' "
+        Try
+            conn.Open()
+            oledbAdapter.DeleteCommand = conn.CreateCommand
+            oledbAdapter.DeleteCommand.CommandText = strqry
+            oledbAdapter.DeleteCommand.ExecuteNonQuery()
+            MsgBox("Row(s) Deleted !! ")
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 
     Public Sub Datashow()
@@ -64,9 +67,36 @@ Public Class crud
         conn.Close()
     End Sub
 
-    Private Sub CRUD_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        Dim cmd As OleDbCommand
+        Dim conn As OleDbConnection = New OleDbConnection()
+        conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
+        conn.Open()
+        Dim strsql As String
+        strsql = "select * from Userinfo where UserName='" & Cusername.Text & "'"
+        cmd = New OleDbCommand(strsql, conn)
 
+        'MsgBox(strsql)
+        'MsgBox(TxtUsername.Text)
+        Dim myreader As OleDbDataReader
+        myreader = cmd.ExecuteReader()
+        myreader.Read()
+        Dim Uname, pass As String
+        Try
+
+            Uname = myreader("UserName")
+            pass = myreader("Password")
+            If Uname = Cusername.Text Then
+                Form2.Show()
+            End If
+
+        Catch ex As Exception
+            MsgBox("Incorrect")
+        End Try
+
+
+
+
+        conn.Close()
     End Sub
-
-
 End Class
