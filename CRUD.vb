@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Imports System.Data.OleDb.OleDbDataReader
 
-Public Class CRUD
+Public Class crud
 
 
     Public cmd As OleDb.OleDbCommand
@@ -45,10 +45,10 @@ Public Class CRUD
         cmd.ExecuteNonQuery()
         conn.Close()
         MsgBox("Data Deleted Successfully!")
-        show()
+        Datashow()
     End Sub
 
-    Public Sub show()
+    Public Sub Datashow()
         Dim strqry As String
         Dim conn As OleDbConnection = New OleDbConnection()
         conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
@@ -63,5 +63,10 @@ Public Class CRUD
         DataGridView1.DataSource = dt.DefaultView
         conn.Close()
     End Sub
+
+    Private Sub CRUD_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
 
 End Class
