@@ -7,7 +7,7 @@ Public Class InsMovie
     'Dim Cmd As OleDbCommand
 
     Dim conn As New OleDb.OleDbConnection
-    Dim Myconnection As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb"
+    Dim Myconnection As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\Updated\MTMS\MovieDb.accdb"
     Dim cmd As New OleDb.OleDbCommand
     Dim da As New OleDb.OleDbDataAdapter
     Dim result As Integer

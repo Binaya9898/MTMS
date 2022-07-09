@@ -39,7 +39,7 @@ Public Class Form1
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
         Dim cmd As OleDbCommand
         Dim conn As OleDbConnection = New OleDbConnection()
-        conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
+        conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Updated\MTMS\MovieDb.accdb; Persist Security Info=False")
         conn.Open()
         Dim strsql As String
         strsql = "select * from Userinfo where UserName='" & TxtUsername.Text & "'"
