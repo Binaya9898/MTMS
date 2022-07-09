@@ -50,17 +50,26 @@ Public Class Form1
         Dim myreader As OleDbDataReader
         myreader = cmd.ExecuteReader()
         myreader.Read()
-        Dim Uname, pass As String
+        Dim Uname, pass, role As String
         Try
 
             Uname = myreader("UserName")
             pass = myreader("Password")
-            If Uname = TxtUsername.Text And pass = TxtPassword.Text Then
+            role = myreader("Role")
+            MsgBox(role + Uname + pass)
+
+            If Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "User" Then
+                Form3.Show()
+
+            ElseIf Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "Admin" Then
+                Me.Hide()
                 AdminPannel.Show()
+            Else
+                MsgBox("Incorrect")
             End If
 
         Catch ex As Exception
-            MsgBox("Incorrect")
+            MsgBox("Exc")
         End Try
 
 
@@ -70,7 +79,7 @@ Public Class Form1
     End Sub
 
     Private Sub SignIn_Click(sender As Object, e As EventArgs) Handles SignIn.Click
-        Form2.Show()
+        NewUser.Show()
     End Sub
 
 

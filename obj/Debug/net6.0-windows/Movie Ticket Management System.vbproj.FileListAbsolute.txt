@@ -34,8 +34,6 @@ D:\Updated\MTMS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.Ole
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.AssemblyReference.cache
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.AdminPannel.resources
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form1.resources
-D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form2.resources
-D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Movie1.resources
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Resources.resources
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.vbproj.GenerateResource.cache
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.GeneratedMSBuildEditorConfig.editorconfig
@@ -50,3 +48,5 @@ D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie Ticket Management System.genrunti
 D:\Updated\MTMS\obj\Debug\net6.0-windows\ref\Movie Ticket Management System.dll
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.CRUD.resources
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form3.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.NewUser.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.InsMovie.resources
