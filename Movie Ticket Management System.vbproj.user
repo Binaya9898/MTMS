@@ -16,7 +16,19 @@
     <Compile Update="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MCRUD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Movie1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserPannel.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

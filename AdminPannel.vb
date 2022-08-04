@@ -37,4 +37,20 @@
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
         Application.Exit()
     End Sub
+
+    Private Sub DeleteMovie_Click(sender As Object, e As EventArgs) Handles DeleteMovie.Click
+        Me.Hide()
+        MCRUD.Show()
+    End Sub
+
+    Private Sub UpdateMovie_Click(sender As Object, e As EventArgs) Handles UpdateMovie.Click
+        Me.Hide()
+        MCRUD.Show()
+
+    End Sub
+
+    Private Sub SearchMovie_Click(sender As Object, e As EventArgs) Handles SearchMovie.Click
+        Me.Hide()
+        MCRUD.Show()
+    End Sub
 End Class

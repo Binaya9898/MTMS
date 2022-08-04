@@ -50,3 +50,7 @@ D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.CRUD.res
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form3.resources
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.NewUser.resources
 D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.InsMovie.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.MCRUD.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Form4.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.UserPannel.resources
+D:\Updated\MTMS\obj\Debug\net6.0-windows\Movie_Ticket_Management_System.Seats.resources

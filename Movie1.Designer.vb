@@ -28,6 +28,8 @@ Partial Class InsMovie
         Me.Mnam = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Mstatus = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -93,6 +95,8 @@ Partial Class InsMovie
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Indigo
+        Me.Panel1.Controls.Add(Me.Mstatus)
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.IconButton3)
         Me.Panel1.Controls.Add(Me.IconButton2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -111,10 +115,31 @@ Partial Class InsMovie
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Mnam)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(10, 0)
+        Me.Panel1.Location = New System.Drawing.Point(-4, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1221, 747)
+        Me.Panel1.Size = New System.Drawing.Size(1236, 763)
         Me.Panel1.TabIndex = 6
+        '
+        'Mstatus
+        '
+        Me.Mstatus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Mstatus.FormattingEnabled = True
+        Me.Mstatus.Items.AddRange(New Object() {"Yes", "No"})
+        Me.Mstatus.Location = New System.Drawing.Point(274, 654)
+        Me.Mstatus.Name = "Mstatus"
+        Me.Mstatus.Size = New System.Drawing.Size(351, 36)
+        Me.Mstatus.TabIndex = 52
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(33, 650)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(98, 38)
+        Me.Label2.TabIndex = 51
+        Me.Label2.Text = "Stauts"
         '
         'IconButton3
         '
@@ -123,7 +148,7 @@ Partial Class InsMovie
         Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.TimesCircle
         Me.IconButton3.IconColor = System.Drawing.Color.White
         Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.Location = New System.Drawing.Point(1134, 20)
+        Me.IconButton3.Location = New System.Drawing.Point(1152, 3)
         Me.IconButton3.Name = "IconButton3"
         Me.IconButton3.Size = New System.Drawing.Size(70, 60)
         Me.IconButton3.TabIndex = 28
@@ -137,7 +162,7 @@ Partial Class InsMovie
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleLeft
         Me.IconButton2.IconColor = System.Drawing.Color.White
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(3, 15)
+        Me.IconButton2.Location = New System.Drawing.Point(3, 0)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(69, 71)
         Me.IconButton2.TabIndex = 27
@@ -247,7 +272,7 @@ Partial Class InsMovie
         Me.Minsert.BackColor = System.Drawing.Color.Indigo
         Me.Minsert.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Minsert.ForeColor = System.Drawing.SystemColors.Control
-        Me.Minsert.Location = New System.Drawing.Point(552, 654)
+        Me.Minsert.Location = New System.Drawing.Point(815, 654)
         Me.Minsert.Name = "Minsert"
         Me.Minsert.Size = New System.Drawing.Size(194, 62)
         Me.Minsert.TabIndex = 6
@@ -271,6 +296,7 @@ Partial Class InsMovie
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1229, 759)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "InsMovie"
         Me.Text = "Add Movie"
         Me.Panel1.ResumeLayout(False)
@@ -298,4 +324,6 @@ Partial Class InsMovie
     Friend WithEvents Button1 As Button
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Mstatus As ComboBox
+    Friend WithEvents Label2 As Label
 End Class

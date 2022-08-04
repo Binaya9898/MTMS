@@ -32,7 +32,7 @@ Public Class crud
             oledbAdapter.DeleteCommand = conn.CreateCommand
             oledbAdapter.DeleteCommand.CommandText = strqry
             oledbAdapter.DeleteCommand.ExecuteNonQuery()
-            MsgBox("Row(s) Deleted !! ")
+            MsgBox("Record Deleted !! ")
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -143,7 +143,7 @@ Public Class crud
             MsgBox("Sucess")
             conn.Close()
         Catch ex As Exception
-            MsgBox("Error")
+            MsgBox(ex.Message)
         End Try
 
     End Sub

@@ -38,8 +38,8 @@ Public Class InsMovie
 
             conn.ConnectionString = Myconnection
             conn.Open()
-            sql = "INSERT INTO Movieinfo(ID,Name, Release_Date, Show_Time, Genre, Hall,Picture) " &
-            " VALUES (@id, @name, @date, @time, @genre, @hall,@picture)"
+            sql = "INSERT INTO Movieinfo(ID,Name, Release_Date, Show_Time, Genre, Hall,Picture,Status) " &
+            " VALUES (@id, @name, @date, @time, @genre, @hall,@picture,@status)"
 
             cmd.Connection = conn
             cmd.CommandText = sql
@@ -50,6 +50,8 @@ Public Class InsMovie
             cmd.Parameters.AddWithValue("@genre", Mgenre.Text)
             cmd.Parameters.AddWithValue("@hall", Mhall.Text)
             cmd.Parameters.AddWithValue("@picture", arrImage)
+            cmd.Parameters.AddWithValue("@status", Mstatus.Text)
+
 
             'MsgBox(DateTime.Parse(Mdate.Value))
 

@@ -32,9 +32,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtUsername.TextChanged
 
-    End Sub
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
         Dim cmd As OleDbCommand
@@ -56,11 +54,16 @@ Public Class Form1
             Uname = myreader("UserName")
             pass = myreader("Password")
             role = myreader("Role")
-            MsgBox(role + Uname + pass)
+            'MsgBox(role + Uname + pass)
 
             If Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "User" Then
-                Form3.Show()
+                Try
+                    Seats.Show()
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
 
+                'MsgBox(role)
             ElseIf Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "Admin" Then
                 Me.Hide()
                 AdminPannel.Show()
