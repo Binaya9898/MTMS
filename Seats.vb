@@ -17,8 +17,71 @@ Public Class Seats
         End Try
 
     End Sub
-    Public Sub clearColor()
 
+    Public Sub SetStatus(ByVal x As Integer)
+        conopen()
+        Dim sql As String
+        If x = 1 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=1"
+
+        ElseIf x = 2 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=2"
+
+        ElseIf x = 3 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=3"
+
+        ElseIf x = 4 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=4"
+
+        ElseIf x = 5 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=5"
+
+        ElseIf x = 6 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=6"
+
+        ElseIf x = 7 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=7"
+
+        ElseIf x = 8 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=8"
+
+        ElseIf x = 9 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=9"
+
+        ElseIf x = 10 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=10"
+
+        ElseIf x = 11 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=11"
+
+        ElseIf x = 12 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=12"
+
+        ElseIf x = 13 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=13"
+
+        ElseIf x = 14 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=14"
+
+        ElseIf x = 15 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=15"
+
+        ElseIf x = 16 Then
+            sql = "Update Seatinfo set SeatStatus=1 where Seatid=16"
+
+        End If
+        Dim cmd As New OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+        MsgBox("Status Updated " & x)
+        conn.Close()
+    End Sub
+    Public Sub clearColor()
+        conopen()
+        Dim sql As String
+        sql = "Update Seatinfo set SeatStatus=0"
+        Dim cmd As New OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+        conn.Close()
         A1.BackColor = Color.Green
         A2.BackColor = Color.Green
         A3.BackColor = Color.Green
@@ -35,10 +98,11 @@ Public Class Seats
         D2.BackColor = Color.Green
         D3.BackColor = Color.Green
         D4.BackColor = Color.Green
+        MsgBox("Updated to 0")
 
     End Sub
     Public Sub changecolor()
-        A1.BackColor = Color.Green
+        A1.BackColor = Color.Blue
 
     End Sub
 
@@ -66,7 +130,15 @@ Public Class Seats
         ''    MsgBox("Already Booked")
         'End If
         'conn.Close()
-        Me.BackColor = Color.Red
+        'Me.BackColor = Color.Red
+        'conopen()
+        'Dim sql As String
+        'sql = "Update Seatinfo set SeatStatus=1 where Seatid=2"
+        'Dim cmd As New OleDbCommand(sql, conn)
+        'cmd.ExecuteNonQuery()
+        'MsgBox("Status Updated")
+        'conn.Close()
+        SetStatus(7)
 
 
 
@@ -353,5 +425,9 @@ Public Class Seats
 
     Private Sub A1_Click(sender As Object, e As EventArgs) Handles A1.Click
         changecolor()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        clearColor()
     End Sub
 End Class
