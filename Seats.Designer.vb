@@ -26,9 +26,9 @@ Partial Class Seats
         Me.IconButton26 = New FontAwesome.Sharp.IconButton()
         Me.IconButton25 = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -36,7 +36,6 @@ Partial Class Seats
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -45,7 +44,7 @@ Partial Class Seats
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.D4 = New FontAwesome.Sharp.IconButton()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.clrbtn = New System.Windows.Forms.Button()
         Me.C4 = New FontAwesome.Sharp.IconButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.B4 = New FontAwesome.Sharp.IconButton()
@@ -120,9 +119,9 @@ Partial Class Seats
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LavenderBlush
+        Me.Panel3.Controls.Add(Me.DateTimePicker1)
         Me.Panel3.Controls.Add(Me.TextBox7)
         Me.Panel3.Controls.Add(Me.TextBox6)
-        Me.Panel3.Controls.Add(Me.TextBox5)
         Me.Panel3.Controls.Add(Me.TextBox3)
         Me.Panel3.Controls.Add(Me.TextBox4)
         Me.Panel3.Controls.Add(Me.TextBox2)
@@ -130,23 +129,29 @@ Partial Class Seats
         Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.Label24)
         Me.Panel3.Controls.Add(Me.Label23)
-        Me.Panel3.Controls.Add(Me.Label22)
         Me.Panel3.Controls.Add(Me.Label21)
         Me.Panel3.Controls.Add(Me.Label20)
         Me.Panel3.Controls.Add(Me.Label19)
         Me.Panel3.Controls.Add(Me.Label18)
         Me.Panel3.Controls.Add(Me.Label17)
         Me.Panel3.Controls.Add(Me.Label16)
-        Me.Panel3.Location = New System.Drawing.Point(951, 78)
+        Me.Panel3.Location = New System.Drawing.Point(883, 78)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(557, 699)
+        Me.Panel3.Size = New System.Drawing.Size(625, 699)
         Me.Panel3.TabIndex = 1
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(170, 95)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(250, 27)
+        Me.DateTimePicker1.TabIndex = 17
         '
         'TextBox7
         '
         Me.TextBox7.BackColor = System.Drawing.Color.Azure
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox7.Location = New System.Drawing.Point(227, 549)
+        Me.TextBox7.Location = New System.Drawing.Point(251, 485)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(302, 34)
         Me.TextBox7.TabIndex = 16
@@ -155,25 +160,16 @@ Partial Class Seats
         '
         Me.TextBox6.BackColor = System.Drawing.Color.Azure
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox6.Location = New System.Drawing.Point(209, 487)
+        Me.TextBox6.Location = New System.Drawing.Point(209, 398)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(302, 34)
         Me.TextBox6.TabIndex = 15
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.Color.Azure
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox5.Location = New System.Drawing.Point(241, 425)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(270, 34)
-        Me.TextBox5.TabIndex = 14
         '
         'TextBox3
         '
         Me.TextBox3.BackColor = System.Drawing.Color.Azure
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox3.Location = New System.Drawing.Point(209, 341)
+        Me.TextBox3.Location = New System.Drawing.Point(217, 341)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(302, 34)
         Me.TextBox3.TabIndex = 13
@@ -182,27 +178,27 @@ Partial Class Seats
         '
         Me.TextBox4.BackColor = System.Drawing.Color.Azure
         Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox4.Location = New System.Drawing.Point(209, 276)
+        Me.TextBox4.Location = New System.Drawing.Point(217, 277)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(302, 34)
+        Me.TextBox4.Size = New System.Drawing.Size(370, 34)
         Me.TextBox4.TabIndex = 12
         '
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.Azure
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox2.Location = New System.Drawing.Point(209, 207)
+        Me.TextBox2.Location = New System.Drawing.Point(217, 208)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(302, 34)
+        Me.TextBox2.Size = New System.Drawing.Size(370, 34)
         Me.TextBox2.TabIndex = 11
         '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.Azure
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(159, 153)
+        Me.TextBox1.Location = New System.Drawing.Point(167, 154)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(352, 34)
+        Me.TextBox1.Size = New System.Drawing.Size(420, 34)
         Me.TextBox1.TabIndex = 10
         '
         'Button3
@@ -220,7 +216,7 @@ Partial Class Seats
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label24.Location = New System.Drawing.Point(45, 549)
+        Me.Label24.Location = New System.Drawing.Point(41, 486)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(166, 31)
         Me.Label24.TabIndex = 8
@@ -230,21 +226,11 @@ Partial Class Seats
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label23.Location = New System.Drawing.Point(41, 487)
+        Me.Label23.Location = New System.Drawing.Point(41, 417)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(150, 31)
         Me.Label23.TabIndex = 7
         Me.Label23.Text = "Tax Amount :"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label22.Location = New System.Drawing.Point(41, 425)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(194, 31)
-        Me.Label22.TabIndex = 6
-        Me.Label22.Text = "Taxable Amount :"
         '
         'Label21
         '
@@ -310,7 +296,7 @@ Partial Class Seats
         '
         Me.Panel2.BackColor = System.Drawing.Color.Pink
         Me.Panel2.Controls.Add(Me.D4)
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.clrbtn)
         Me.Panel2.Controls.Add(Me.C4)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.B4)
@@ -354,17 +340,17 @@ Partial Class Seats
         Me.D4.TabIndex = 15
         Me.D4.UseVisualStyleBackColor = False
         '
-        'Button2
+        'clrbtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Crimson
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(490, 633)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(192, 54)
-        Me.Button2.TabIndex = 40
-        Me.Button2.Text = "Clear All"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.clrbtn.BackColor = System.Drawing.Color.Crimson
+        Me.clrbtn.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.clrbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.clrbtn.Location = New System.Drawing.Point(490, 633)
+        Me.clrbtn.Name = "clrbtn"
+        Me.clrbtn.Size = New System.Drawing.Size(192, 54)
+        Me.clrbtn.TabIndex = 40
+        Me.clrbtn.Text = "Clear All"
+        Me.clrbtn.UseVisualStyleBackColor = False
         '
         'C4
         '
@@ -726,12 +712,11 @@ Partial Class Seats
     Friend WithEvents B1 As FontAwesome.Sharp.IconButton
     Friend WithEvents A2 As FontAwesome.Sharp.IconButton
     Friend WithEvents A1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Button2 As Button
+    Friend WithEvents clrbtn As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
-    Friend WithEvents Label22 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
@@ -746,9 +731,9 @@ Partial Class Seats
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents D4 As FontAwesome.Sharp.IconButton
     Friend WithEvents C4 As FontAwesome.Sharp.IconButton
     Friend WithEvents B4 As FontAwesome.Sharp.IconButton
     Friend WithEvents A4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

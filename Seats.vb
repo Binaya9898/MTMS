@@ -18,6 +18,7 @@ Public Class Seats
 
     End Sub
 
+
     Public Sub SetStatus(ByVal x As Integer)
         conopen()
         Dim sql As String
@@ -72,10 +73,11 @@ Public Class Seats
         End If
         Dim cmd As New OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
-        MsgBox("Status Updated " & x)
+        'MsgBox("Status Updated " & x)
         conn.Close()
     End Sub
     Public Sub clearColor()
+        ClearTIcket()
         conopen()
         Dim sql As String
         sql = "Update Seatinfo set SeatStatus=0"
@@ -98,7 +100,7 @@ Public Class Seats
         D2.BackColor = Color.Green
         D3.BackColor = Color.Green
         D4.BackColor = Color.Green
-        MsgBox("Updated to 0")
+        'MsgBox("Updated to 0")
 
     End Sub
     Public Sub changecolor()
@@ -106,43 +108,7 @@ Public Class Seats
 
     End Sub
 
-    Private Sub A2_Click(sender As Object, e As EventArgs) Handles A2.Click
-        'conopen()
 
-        'Dim sql As String
-        'sql = "select * from Seatinfo where SeatId=2"
-        'cmd = New OleDbCommand(sql, conn)
-        'Dim myreader As OleDbDataReader
-        'myreader = cmd.ExecuteReader()
-        'myreader.Read()
-        'Dim seatstat As Integer
-        'Dim seatid As String
-
-        'seatstat = myreader("SeatStatus")
-
-        'If seatstat = 0 Then
-        '    'A2.BackColor = Color.Red
-        '    MsgBox("Red")
-        'Else
-        'MsgBox("Already Booked")
-        ''ElseIf seatstat = 1 Then
-        ''    'MsgBox("Booked Sucessfully")
-        ''    MsgBox("Already Booked")
-        'End If
-        'conn.Close()
-        'Me.BackColor = Color.Red
-        'conopen()
-        'Dim sql As String
-        'sql = "Update Seatinfo set SeatStatus=1 where Seatid=2"
-        'Dim cmd As New OleDbCommand(sql, conn)
-        'cmd.ExecuteNonQuery()
-        'MsgBox("Status Updated")
-        'conn.Close()
-        SetStatus(7)
-
-
-
-    End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
         Dim i As Integer
@@ -154,13 +120,13 @@ Public Class Seats
         Dim sql As String
         sql = "select * from Seatinfo where SeatId=1"
         cmd = New OleDbCommand(sql, conn)
-            Dim myreader As OleDbDataReader
-            myreader = cmd.ExecuteReader()
-            myreader.Read()
-            Dim seatstat As Integer
-            Dim seatid As String
+        Dim myreader As OleDbDataReader
+        myreader = cmd.ExecuteReader()
+        myreader.Read()
+        Dim seatstat As Integer
+        Dim seatid As String
 
-            seatstat = myreader("SeatStatus")
+        seatstat = myreader("SeatStatus")
         If seatstat = 1 Then
             A1.BackColor = Color.Red
         Else
@@ -422,12 +388,76 @@ Public Class Seats
 
         conn.Close()
     End Sub
-
-    Private Sub A1_Click(sender As Object, e As EventArgs) Handles A1.Click
-        changecolor()
+    Private Sub clrbtn_Click(sender As Object, e As EventArgs) Handles clrbtn.Click
+        clearColor()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        clearColor()
+    Public Sub FillTicket(ByVal x As Integer)
+
+        conopen()
+        Dim stname As String
+        Dim sql As String
+        If x = 1 Then
+            sql = "Select * from Seatinfo where  Seatid=1"
+            stname = "A1"
+        ElseIf x = 2 Then
+            sql = "Select * from Seatinfo where  Seatid=2"
+            stname = "A2"
+        ElseIf x = 3 Then
+            sql = "Select * from Seatinfo where  Seatid=3"
+            stname = "A3"
+        ElseIf x = 4 Then
+            sql = "Select * from Seatinfo where  Seatid=4"
+            stname = "A4"
+
+        End If
+
+        cmd = New OleDbCommand(sql, conn)
+        Dim myreader As OleDbDataReader
+        myreader = cmd.ExecuteReader()
+        myreader.Read()
+        Dim price1 As Integer
+        price1 = myreader("Price")
+
+        TextBox3.Text = price1
+        TextBox4.Text = [stname]
+        TextBox6.Text = price1 * 0.1
+        TextBox7.Text = price1 + TextBox6.Text
+
+
+
+    End Sub
+    Public Sub ClearTIcket()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox6.Text = ""
+        TextBox7.Text = ""
+    End Sub
+    Private Sub A1_Click(sender As Object, e As EventArgs) Handles A1.Click
+        ClearTIcket()
+        SetStatus(1)
+        FillTicket(1)
+    End Sub
+    Private Sub A2_Click(sender As Object, e As EventArgs) Handles A2.Click
+        ClearTIcket()
+        SetStatus(2)
+        FillTicket(2)
+
+    End Sub
+
+
+
+    Private Sub A3_Click(sender As Object, e As EventArgs) Handles A3.Click
+        ClearTIcket()
+        SetStatus(3)
+        FillTicket(3)
+    End Sub
+
+    Private Sub A4_Click(sender As Object, e As EventArgs) Handles A4.Click
+        ClearTIcket()
+        SetStatus(4)
+        FillTicket(4)
     End Sub
 End Class

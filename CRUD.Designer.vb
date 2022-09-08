@@ -44,6 +44,8 @@ Partial Class crud
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Crole = New System.Windows.Forms.Label()
+        Me.Srole = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,7 +55,7 @@ Partial Class crud
         Me.BtnSearchAll.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnSearchAll.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSearchAll.ForeColor = System.Drawing.SystemColors.Control
-        Me.BtnSearchAll.Location = New System.Drawing.Point(738, 196)
+        Me.BtnSearchAll.Location = New System.Drawing.Point(700, 120)
         Me.BtnSearchAll.Name = "BtnSearchAll"
         Me.BtnSearchAll.Size = New System.Drawing.Size(172, 57)
         Me.BtnSearchAll.TabIndex = 2
@@ -65,7 +67,7 @@ Partial Class crud
         Me.BtnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnUpdate.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnUpdate.ForeColor = System.Drawing.SystemColors.Control
-        Me.BtnUpdate.Location = New System.Drawing.Point(548, 196)
+        Me.BtnUpdate.Location = New System.Drawing.Point(513, 120)
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(151, 57)
         Me.BtnUpdate.TabIndex = 3
@@ -77,7 +79,7 @@ Partial Class crud
         Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnDelete.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnDelete.ForeColor = System.Drawing.SystemColors.Control
-        Me.BtnDelete.Location = New System.Drawing.Point(363, 196)
+        Me.BtnDelete.Location = New System.Drawing.Point(339, 120)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(146, 57)
         Me.BtnDelete.TabIndex = 4
@@ -88,7 +90,7 @@ Partial Class crud
         '
         Me.Cusername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Cusername.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Cusername.Location = New System.Drawing.Point(327, 88)
+        Me.Cusername.Location = New System.Drawing.Point(327, 41)
         Me.Cusername.Name = "Cusername"
         Me.Cusername.PlaceholderText = "Enter UserName"
         Me.Cusername.Size = New System.Drawing.Size(604, 54)
@@ -99,7 +101,7 @@ Partial Class crud
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(743, 317)
+        Me.DataGridView1.Location = New System.Drawing.Point(743, 236)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 29
@@ -114,7 +116,7 @@ Partial Class crud
         Me.BtnSrch.IconChar = FontAwesome.Sharp.IconChar.Search
         Me.BtnSrch.IconColor = System.Drawing.Color.Gainsboro
         Me.BtnSrch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnSrch.Location = New System.Drawing.Point(937, 88)
+        Me.BtnSrch.Location = New System.Drawing.Point(937, 35)
         Me.BtnSrch.Name = "BtnSrch"
         Me.BtnSrch.Size = New System.Drawing.Size(83, 60)
         Me.BtnSrch.TabIndex = 8
@@ -149,6 +151,8 @@ Partial Class crud
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Crole)
+        Me.Panel1.Controls.Add(Me.Srole)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Spassword)
         Me.Panel1.Controls.Add(Me.SUname)
@@ -162,9 +166,9 @@ Partial Class crud
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(35, 317)
+        Me.Panel1.Location = New System.Drawing.Point(29, 236)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(690, 500)
+        Me.Panel1.Size = New System.Drawing.Size(691, 571)
         Me.Panel1.TabIndex = 11
         '
         'Button2
@@ -172,7 +176,7 @@ Partial Class crud
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button2.Location = New System.Drawing.Point(179, 445)
+        Me.Button2.Location = New System.Drawing.Point(255, 490)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(151, 57)
         Me.Button2.TabIndex = 36
@@ -182,7 +186,7 @@ Partial Class crud
         'Spassword
         '
         Me.Spassword.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Spassword.Location = New System.Drawing.Point(179, 371)
+        Me.Spassword.Location = New System.Drawing.Point(179, 359)
         Me.Spassword.Name = "Spassword"
         Me.Spassword.Size = New System.Drawing.Size(351, 38)
         Me.Spassword.TabIndex = 35
@@ -232,7 +236,7 @@ Partial Class crud
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(20, 369)
+        Me.Label6.Location = New System.Drawing.Point(20, 359)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(139, 38)
         Me.Label6.TabIndex = 29
@@ -288,6 +292,27 @@ Partial Class crud
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Update Details"
         '
+        'Crole
+        '
+        Me.Crole.AutoSize = True
+        Me.Crole.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Crole.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Crole.Location = New System.Drawing.Point(30, 425)
+        Me.Crole.Name = "Crole"
+        Me.Crole.Size = New System.Drawing.Size(74, 38)
+        Me.Crole.TabIndex = 38
+        Me.Crole.Text = "Role"
+        '
+        'Srole
+        '
+        Me.Srole.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Srole.FormattingEnabled = True
+        Me.Srole.Items.AddRange(New Object() {"Admin", " User"})
+        Me.Srole.Location = New System.Drawing.Point(179, 429)
+        Me.Srole.Name = "Srole"
+        Me.Srole.Size = New System.Drawing.Size(351, 36)
+        Me.Srole.TabIndex = 37
+        '
         'crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -338,4 +363,6 @@ Partial Class crud
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Crole As Label
+    Friend WithEvents Srole As ComboBox
 End Class

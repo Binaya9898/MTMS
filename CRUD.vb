@@ -7,7 +7,7 @@ Public Class crud
 
     Public cmd As OleDb.OleDbCommand
     Public dtr As OleDb.OleDbDataReader
-    Dim conn As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb")
+    Dim conn As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Updated\MTMS\MovieDb.accdb")
     Dim oledbAdapter As New OleDbDataAdapter
     Dim da As New OleDbDataAdapter
     Dim strqry As String
@@ -78,16 +78,13 @@ Public Class crud
             pass = myreader("Password")
             If Uname = Cusername.Text Then
                 Panel1.Show()
-                'strqry = "update Userinfo set[Id] " & Sid.Text & ",[Name]='" & SName.Text & "',[Address]='" & SAddress.Text & "',[UserName]='" & SUname.Text & "',[Password]='" & Spassword.Text & "'where UserName=User"
-                'cmd = New OleDbCommand(strqry, conn)
-                'cmd.ExecuteNonQuery()
-                'MsgBox("Sucess")
-                'conn.Close()
+
+                conn.Close()
 
             End If
 
         Catch ex As Exception
-            MsgBox("Incorrect")
+            MsgBox(ex.Message)
         End Try
 
 
@@ -129,22 +126,38 @@ Public Class crud
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        'Dim conn As OleDbConnection = New OleDbConnection()
-        'conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
 
-        'Dim strqry As String
         conn.Open()
-        strqry = "update Userinfo set [Id] " & Sid.Text & ",[Name]='" & SName.Text & "',[Address]='" & SAddress.Text & "',[UserName]='" & SUname.Text & "',[Password]='" & Spassword.Text & "'where UserName=User"
-        Dim cmd As OleDbCommand = New OleDbCommand(strqry, conn)
-        MsgBox("Fine up to here")
-        Try
-            cmd.ExecuteNonQuery()
-            cmd.Dispose()
-            MsgBox("Sucess")
-            conn.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Dim a As String
+        a = Cusername.Text
+        MsgBox(Sid.Text)
+
+        strqry = "Update UserInfo set ID = " & Sid.Text & ",Name='" & SName.Text & "',Address='" & SAddress.Text & "',UserName='" & SUname.Text & "',[Password]='" & Spassword.Text & "',Role='" & Srole.Text & "' where UserName='" & Cusername.Text & "'"
+        cmd = New OleDbCommand(strqry, conn)
+        cmd.ExecuteNonQuery()
+        MsgBox("Sucess")
+
+
+
+
+        'Dim item As Integer
+        'Dim myComm As New OleDbCommand("UPDATE UserInfo SET ID =@p1, Name =@p2,Address =@p3,UserName =@p4,[Password] =@p5,Role =@p6 WHERE UserName = @p7", conn)
+
+
+        'myComm.Parameters.AddWithValue("@p1", Sid.Text)
+        'myComm.Parameters.AddWithValue("@p2", SName.Text)
+        'myComm.Parameters.AddWithValue("@p3", SAddress.Text)
+        'myComm.Parameters.AddWithValue("@p4", SUname.Text)
+        'myComm.Parameters.AddWithValue("@p5", Spassword.Text)
+        'myComm.Parameters.AddWithValue("@p6", Srole.Text)
+        'myComm.Parameters.AddWithValue("@p7", Cusername.Text)
+
+        'conn.Open()
+        'item = myComm.ExecuteNonQuery()
+        'conn.Close()
+
+
+
 
     End Sub
 
