@@ -54,14 +54,9 @@ Public Class Form1
             Uname = myreader("UserName")
             pass = myreader("Password")
             role = myreader("Role")
-            'MsgBox(role + Uname + pass)
 
             If Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "User" Then
-                Try
-                    Seats.Show()
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+                Form4.Show()
 
                 'MsgBox(role)
             ElseIf Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "Admin" Then
@@ -72,7 +67,7 @@ Public Class Form1
             End If
 
         Catch ex As Exception
-            MsgBox("Exc")
+            MsgBox("Incorrect")
         End Try
 
 

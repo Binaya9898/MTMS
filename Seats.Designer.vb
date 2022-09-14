@@ -22,6 +22,7 @@ Partial Class Seats
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Seats))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton26 = New FontAwesome.Sharp.IconButton()
         Me.IconButton25 = New FontAwesome.Sharp.IconButton()
@@ -71,6 +72,8 @@ Partial Class Seats
         Me.B1 = New FontAwesome.Sharp.IconButton()
         Me.A2 = New FontAwesome.Sharp.IconButton()
         Me.A1 = New FontAwesome.Sharp.IconButton()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -667,6 +670,19 @@ Partial Class Seats
         Me.A1.TabIndex = 0
         Me.A1.UseVisualStyleBackColor = False
         '
+        'PrintDocument1
+        '
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
         'Seats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -736,4 +752,6 @@ Partial Class Seats
     Friend WithEvents B4 As FontAwesome.Sharp.IconButton
     Friend WithEvents A4 As FontAwesome.Sharp.IconButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents PrintDocument1 As Drawing.Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
 End Class

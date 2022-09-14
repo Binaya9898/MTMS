@@ -33,6 +33,7 @@ Public Class crud
             oledbAdapter.DeleteCommand.CommandText = strqry
             oledbAdapter.DeleteCommand.ExecuteNonQuery()
             MsgBox("Record Deleted !! ")
+            conn.Close()
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -100,26 +101,36 @@ Public Class crud
     End Sub
 
     Private Sub BtnSrch_Click(sender As Object, e As EventArgs) Handles BtnSrch.Click
-        'Dim strqry As String
-        'Dim conn As OleDbConnection = New OleDbConnection()
-        'conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
-
-        Try
-            Dim dt As New DataTable
-            Dim ds As New DataSet
-            ds.Tables.Add(dt)
-            Dim da As New OleDbDataAdapter
-            conn.Open()
-            strqry = "select * from Userinfo where UserName='" & Cusername.Text & "' "
-            da = New OleDbDataAdapter(strqry, conn)
-            da.Fill(dt)
-            DataGridView1.DataSource = dt.DefaultView
-            conn.Close()
-            Cusername.Text = ""
-            Cusername.Text = ""
-        Catch ex As Exception
-            MsgBox("No Data Found", MsgBoxStyle.Critical)
-        End Try
+        'Try
+        '    Dim dt As New DataTable
+        '    Dim ds As New DataSet
+        '    ds.Tables.Add(dt)
+        '    Dim da As New OleDbDataAdapter
+        '    conn.Open()
+        '    strqry = "select * from UserInfo where UserName='" & Cusername.Text & "' "
+        '    da = New OleDbDataAdapter(strqry, conn)
+        '    da.Fill(dt)
+        '    DataGridView1.DataSource = dt.DefaultView
+        '    conn.Close()
+        '    'Cusername.Text = ""
+        '    'Cusername.Text = ""
+        'Catch ex As Exception
+        '    MsgBox("No Data Found", MsgBoxStyle.Critical)
+        'End Try
+        conn.Open()
+        Dim myreader As OleDbDataReader
+        strqry = "select * from UserInfo where UserName='" & Cusername.Text & "'"
+        cmd = New OleDbCommand(strqry, conn)
+        myreader = cmd.ExecuteReader()
+        myreader.Read()
+        Sid.Text = myreader("ID")
+        SName.Text = myreader("Name")
+        SAddress.Text = myreader("Address")
+        SUname.Text = myreader("UserName")
+        Spassword.Text = myreader("Password")
+        Srole.Text = myreader("Role")
+        Panel1.Show()
+        conn.Close()
     End Sub
 
 
@@ -128,36 +139,11 @@ Public Class crud
 
 
         conn.Open()
-        Dim a As String
-        a = Cusername.Text
-        MsgBox(Sid.Text)
-
         strqry = "Update UserInfo set ID = " & Sid.Text & ",Name='" & SName.Text & "',Address='" & SAddress.Text & "',UserName='" & SUname.Text & "',[Password]='" & Spassword.Text & "',Role='" & Srole.Text & "' where UserName='" & Cusername.Text & "'"
         cmd = New OleDbCommand(strqry, conn)
         cmd.ExecuteNonQuery()
         MsgBox("Sucess")
-
-
-
-
-        'Dim item As Integer
-        'Dim myComm As New OleDbCommand("UPDATE UserInfo SET ID =@p1, Name =@p2,Address =@p3,UserName =@p4,[Password] =@p5,Role =@p6 WHERE UserName = @p7", conn)
-
-
-        'myComm.Parameters.AddWithValue("@p1", Sid.Text)
-        'myComm.Parameters.AddWithValue("@p2", SName.Text)
-        'myComm.Parameters.AddWithValue("@p3", SAddress.Text)
-        'myComm.Parameters.AddWithValue("@p4", SUname.Text)
-        'myComm.Parameters.AddWithValue("@p5", Spassword.Text)
-        'myComm.Parameters.AddWithValue("@p6", Srole.Text)
-        'myComm.Parameters.AddWithValue("@p7", Cusername.Text)
-
-        'conn.Open()
-        'item = myComm.ExecuteNonQuery()
-        'conn.Close()
-
-
-
+        conn.Close()
 
     End Sub
 
@@ -171,4 +157,6 @@ Public Class crud
         Application.Exit()
 
     End Sub
+
+
 End Class

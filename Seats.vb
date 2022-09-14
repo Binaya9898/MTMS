@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.OleDb.OleDbDataReader
+Imports Graphics.IO
 Public Class Seats
 
     Dim cmd As OleDbCommand
@@ -393,6 +394,8 @@ Public Class Seats
     End Sub
 
     Public Sub FillTicket(ByVal x As Integer)
+        'Dim conn As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb")
+
 
         conopen()
         Dim stname As String
@@ -409,6 +412,42 @@ Public Class Seats
         ElseIf x = 4 Then
             sql = "Select * from Seatinfo where  Seatid=4"
             stname = "A4"
+        ElseIf x = 5 Then
+            sql = "Select * from Seatinfo where  Seatid=5"
+            stname = "B1"
+        ElseIf x = 6 Then
+            sql = "Select * from Seatinfo where  Seatid=6"
+            stname = "B2"
+        ElseIf x = 7 Then
+            sql = "Select * from Seatinfo where  Seatid=7"
+            stname = "B3"
+        ElseIf x = 8 Then
+            sql = "Select * from Seatinfo where  Seatid=8"
+            stname = "B4"
+        ElseIf x = 9 Then
+            sql = "Select * from Seatinfo where  Seatid=9"
+            stname = "C1"
+        ElseIf x = 10 Then
+            sql = "Select * from Seatinfo where  Seatid=10"
+            stname = "C2"
+        ElseIf x = 11 Then
+            sql = "Select * from Seatinfo where  Seatid=11"
+            stname = "C3"
+        ElseIf x = 12 Then
+            sql = "Select * from Seatinfo where  Seatid=12"
+            stname = "C4"
+        ElseIf x = 13 Then
+            sql = "Select * from Seatinfo where  Seatid=13"
+            stname = "D1"
+        ElseIf x = 14 Then
+            sql = "Select * from Seatinfo where  Seatid=14"
+            stname = "D2"
+        ElseIf x = 15 Then
+            sql = "Select * from Seatinfo where  Seatid=15"
+            stname = "D3"
+        ElseIf x = 16 Then
+            sql = "Select * from Seatinfo where  Seatid=16"
+            stname = "D4"
 
         End If
 
@@ -418,7 +457,7 @@ Public Class Seats
         myreader.Read()
         Dim price1 As Integer
         price1 = myreader("Price")
-
+        TextBox2.Text = Form4.sharename
         TextBox3.Text = price1
         TextBox4.Text = [stname]
         TextBox6.Text = price1 * 0.1
@@ -459,5 +498,94 @@ Public Class Seats
         ClearTIcket()
         SetStatus(4)
         FillTicket(4)
+    End Sub
+
+    Private Sub B1_Click(sender As Object, e As EventArgs) Handles B1.Click
+        ClearTIcket()
+        SetStatus(5)
+        FillTicket(5)
+    End Sub
+
+    Private Sub B2_Click(sender As Object, e As EventArgs) Handles B2.Click
+        ClearTIcket()
+        SetStatus(6)
+        FillTicket(6)
+    End Sub
+
+    Private Sub B3_Click(sender As Object, e As EventArgs) Handles B3.Click
+        ClearTIcket()
+        SetStatus(7)
+        FillTicket(7)
+    End Sub
+
+    Private Sub B4_Click(sender As Object, e As EventArgs) Handles B4.Click
+        ClearTIcket()
+        SetStatus(8)
+        FillTicket(8)
+    End Sub
+
+    Private Sub C1_Click(sender As Object, e As EventArgs) Handles C1.Click
+        ClearTIcket()
+        SetStatus(9)
+        FillTicket(9)
+    End Sub
+
+    Private Sub C2_Click(sender As Object, e As EventArgs) Handles C2.Click
+        ClearTIcket()
+        SetStatus(10)
+        FillTicket(10)
+    End Sub
+
+    Private Sub C3_Click(sender As Object, e As EventArgs) Handles C3.Click
+        ClearTIcket()
+        SetStatus(11)
+        FillTicket(11)
+    End Sub
+
+    Private Sub C4_Click(sender As Object, e As EventArgs) Handles C4.Click
+        ClearTIcket()
+        SetStatus(12)
+        FillTicket(12)
+    End Sub
+
+    Private Sub D1_Click(sender As Object, e As EventArgs) Handles D1.Click
+        ClearTIcket()
+        SetStatus(13)
+        FillTicket(13)
+    End Sub
+
+    Private Sub D2_Click(sender As Object, e As EventArgs) Handles D2.Click
+        ClearTIcket()
+        SetStatus(14)
+        FillTicket(14)
+    End Sub
+
+    Private Sub D3_Click(sender As Object, e As EventArgs) Handles D3.Click
+        ClearTIcket()
+        SetStatus(15)
+        FillTicket(15)
+    End Sub
+
+    Private Sub D4_Click(sender As Object, e As EventArgs) Handles D4.Click
+        ClearTIcket()
+        SetStatus(16)
+        FillTicket(16)
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        'e.Graphics.DrawString("DPS MINIMART", New Font("Segoe UI", 22), Brushes.Red, 350, 45)
+        'e.Graphics.DrawString("**BILL**", New Font("Segoe UI", 22), Brushes.Red, 385, 80)
+        'Dim bm As New Bitmap(Me.TextBox2, Me.TextBox2.Height)
+        'BillGV.DrawToBitmap(bm, New Rectangle(0, 0, Me.BillGV.Width, Me.BillGV.Height))
+        'e.Graphics.DrawImage(bm, 100, 115)
+        'e.Graphics.DrawString("TOTAL AMOUNT =" + Grandtotal, New Font("Segoe UI", 22), Brushes.Red, 650, 45)
+        'e.Graphics.DrawString("**THANK YOU VISIT AGAIN**", New Font("Segoe UI", 22), Brushes.Red, 250, 355)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

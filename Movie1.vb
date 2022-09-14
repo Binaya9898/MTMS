@@ -14,63 +14,116 @@ Public Class InsMovie
     Dim imgpath As String
     Dim arrImage() As Byte
     Dim sql As String
+    Dim strqry As String
+    Dim cn As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= D:\Updated\MTMS\MovieDb.accdb")
+
     Private Sub Minsert_Click(sender As Object, e As EventArgs) Handles Minsert.Click
-        'Con.Open()
-        'Cmd = New OleDbCommand("insert into Movieinfo values(" & Mid.Text & ",'" & Mname.Text & "'," & Mdate.Text & "," & Mshowtime.Text & ",'" & Mhall.Text & "','" & Mgenre.Text & "')", Con)
-        'Dim i
-        'i = Cmd.ExecuteNonQuery()
-        'If i > 0 Then
-        '    MsgBox("Sucesfully Saved")
-        'Else
-        '    MsgBox("Sucesfully Not SAVED", MsgBoxStyle.Critical)
 
-        'End If
-        'Con.Close()
-        Try
+        'conn.ConnectionString = Myconnection
+        If (Mstatus.Text = "Yes" And Mhall.Text = "East") Then
+            strqry = "select * from Movieinfo where Hall='" & Mhall.Text & "' "
+            cn.Open()
+            Dim cmd15 As New OleDbCommand(strqry, cn)
+            Dim myreader As OleDbDataReader
+            myreader = cmd15.ExecuteReader()
+            myreader.Read()
+            Dim status = myreader("Status")
+            Dim hall = myreader("Hall")
+            MsgBox(hall)
+            Dim stat = status.ToString()
+            MsgBox(stat)
+            If stat = "East" And hall = Mhall.Text Then
+                MsgBox("Cannot add to the showing")
+            Else
+                Try
 
-            Dim mstream As New System.IO.MemoryStream()
+                    Dim mstream As New System.IO.MemoryStream()
 
-            Mpicture.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
-            arrImage = mstream.GetBuffer()
-            Dim FileSize As UInt32
-            FileSize = mstream.Length
-            mstream.Close()
+                    Mpicture.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
+                    arrImage = mstream.GetBuffer()
+                    Dim FileSize As UInt32
+                    FileSize = mstream.Length
+                    mstream.Close()
 
-            conn.ConnectionString = Myconnection
-            conn.Open()
-            sql = "INSERT INTO Movieinfo(ID,Name, Release_Date, Show_Time, Genre, Hall,Picture,Status) " &
+                    conn.ConnectionString = Myconnection
+                    conn.Open()
+                    sql = "INSERT INTO Movieinfo(ID,Name, Release_Date, Show_Time, Genre, Hall,Picture,Status) " &
+                " VALUES (@id, @name, @date, @time, @genre, @hall,@picture,@status)"
+
+                    cmd.Connection = conn
+                    cmd.CommandText = sql
+                    cmd.Parameters.AddWithValue("@id", Mid.Text)
+                    cmd.Parameters.AddWithValue("@name", Mname.Text)
+                    cmd.Parameters.AddWithValue("@date", DateTime.Parse(Mdate.Value))
+                    cmd.Parameters.AddWithValue("@time", Mshowtime.Text)
+                    cmd.Parameters.AddWithValue("@genre", Mgenre.Text)
+                    cmd.Parameters.AddWithValue("@hall", Mhall.Text)
+                    cmd.Parameters.AddWithValue("@picture", arrImage)
+                    cmd.Parameters.AddWithValue("@status", Mstatus.Text)
+
+
+                    'MsgBox(DateTime.Parse(Mdate.Value))
+
+                    Dim r As Integer
+                    r = cmd.ExecuteNonQuery()
+                    If r > 0 Then
+                        MsgBox("Movie Added Sucessfully!")
+                        ClearAll()
+                    Else
+                        MsgBox("Process Failed!")
+                    End If
+                    conn.Close()
+
+                Catch ex As Exception
+                    MsgBox("Process Failed!")
+                End Try
+            End If
+            cn.Close()
+        Else
+
+            Try
+
+                Dim mstream As New System.IO.MemoryStream()
+
+                Mpicture.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
+                arrImage = mstream.GetBuffer()
+                Dim FileSize As UInt32
+                FileSize = mstream.Length
+                mstream.Close()
+
+                conn.ConnectionString = Myconnection
+                conn.Open()
+                sql = "INSERT INTO Movieinfo(ID,Name, Release_Date, Show_Time, Genre, Hall,Picture,Status) " &
             " VALUES (@id, @name, @date, @time, @genre, @hall,@picture,@status)"
 
-            cmd.Connection = conn
-            cmd.CommandText = sql
-            cmd.Parameters.AddWithValue("@id", Mid.Text)
-            cmd.Parameters.AddWithValue("@name", Mname.Text)
-            cmd.Parameters.AddWithValue("@date", DateTime.Parse(Mdate.Value))
-            cmd.Parameters.AddWithValue("@time", Mshowtime.Text)
-            cmd.Parameters.AddWithValue("@genre", Mgenre.Text)
-            cmd.Parameters.AddWithValue("@hall", Mhall.Text)
-            cmd.Parameters.AddWithValue("@picture", arrImage)
-            cmd.Parameters.AddWithValue("@status", Mstatus.Text)
+                cmd.Connection = conn
+                cmd.CommandText = sql
+                cmd.Parameters.AddWithValue("@id", Mid.Text)
+                cmd.Parameters.AddWithValue("@name", Mname.Text)
+                cmd.Parameters.AddWithValue("@date", DateTime.Parse(Mdate.Value))
+                cmd.Parameters.AddWithValue("@time", Mshowtime.Text)
+                cmd.Parameters.AddWithValue("@genre", Mgenre.Text)
+                cmd.Parameters.AddWithValue("@hall", Mhall.Text)
+                cmd.Parameters.AddWithValue("@picture", arrImage)
+                cmd.Parameters.AddWithValue("@status", Mstatus.Text)
 
 
-            'MsgBox(DateTime.Parse(Mdate.Value))
+                'MsgBox(DateTime.Parse(Mdate.Value))
 
-            Dim r As Integer
-            r = cmd.ExecuteNonQuery()
-            If r > 0 Then
-                MsgBox("Movie Added Sucessfully!")
-            Else
-                MsgBox("Process Failed!")
-            End If
-            conn.Close()
+                Dim r As Integer
+                r = cmd.ExecuteNonQuery()
+                If r > 0 Then
+                    MsgBox("Movie Added Sucessfully!")
+                Else
+                    MsgBox("Process Failed!")
+                End If
+                conn.Close()
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
 
-
-
-
+        End If
 
 
     End Sub
@@ -89,5 +142,25 @@ Public Class InsMovie
         End Try
     End Sub
 
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        Me.Hide()
+        AdminPannel.Show()
+
+    End Sub
+
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+        Application.Exit()
+
+    End Sub
+
+
+    Public Function ClearAll()
+        Mid.Text = ""
+        Mname.Text = ""
+        Mshowtime.Text = ""
+        Mhall.Text = ""
+        Mgenre.Text = ""
+        Mstatus.Text = ""
+    End Function
 
 End Class

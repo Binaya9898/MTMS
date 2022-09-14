@@ -31,6 +31,8 @@ Partial Class crud
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Crole = New System.Windows.Forms.Label()
+        Me.Srole = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Spassword = New System.Windows.Forms.TextBox()
         Me.SUname = New System.Windows.Forms.TextBox()
@@ -44,8 +46,6 @@ Partial Class crud
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Crole = New System.Windows.Forms.Label()
-        Me.Srole = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -171,6 +171,27 @@ Partial Class crud
         Me.Panel1.Size = New System.Drawing.Size(691, 571)
         Me.Panel1.TabIndex = 11
         '
+        'Crole
+        '
+        Me.Crole.AutoSize = True
+        Me.Crole.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Crole.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Crole.Location = New System.Drawing.Point(30, 425)
+        Me.Crole.Name = "Crole"
+        Me.Crole.Size = New System.Drawing.Size(74, 38)
+        Me.Crole.TabIndex = 38
+        Me.Crole.Text = "Role"
+        '
+        'Srole
+        '
+        Me.Srole.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Srole.FormattingEnabled = True
+        Me.Srole.Items.AddRange(New Object() {"Admin", "User"})
+        Me.Srole.Location = New System.Drawing.Point(179, 429)
+        Me.Srole.Name = "Srole"
+        Me.Srole.Size = New System.Drawing.Size(351, 36)
+        Me.Srole.TabIndex = 37
+        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -292,27 +313,6 @@ Partial Class crud
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Update Details"
         '
-        'Crole
-        '
-        Me.Crole.AutoSize = True
-        Me.Crole.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Crole.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Crole.Location = New System.Drawing.Point(30, 425)
-        Me.Crole.Name = "Crole"
-        Me.Crole.Size = New System.Drawing.Size(74, 38)
-        Me.Crole.TabIndex = 38
-        Me.Crole.Text = "Role"
-        '
-        'Srole
-        '
-        Me.Srole.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Srole.FormattingEnabled = True
-        Me.Srole.Items.AddRange(New Object() {"Admin", " User"})
-        Me.Srole.Location = New System.Drawing.Point(179, 429)
-        Me.Srole.Name = "Srole"
-        Me.Srole.Size = New System.Drawing.Size(351, 36)
-        Me.Srole.TabIndex = 37
-        '
         'crud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -330,6 +330,7 @@ Partial Class crud
         Me.Controls.Add(Me.BtnSearchAll)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "crud"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin Pannel"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
