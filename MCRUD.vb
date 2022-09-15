@@ -119,5 +119,8 @@ Public Class MCRUD
         cmd.ExecuteNonQuery()
         MsgBox("Sucess")
         conn.Close()
+        ClearAll()
+        Panel1.Hide()
+
     End Sub
 End Class

@@ -56,6 +56,7 @@ Public Class Form1
             role = myreader("Role")
 
             If Uname = TxtUsername.Text And pass = TxtPassword.Text And role = "User" Then
+                Me.Hide()
                 Form4.Show()
 
                 'MsgBox(role)

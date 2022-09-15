@@ -19,6 +19,7 @@ Public Class NewUser
 
         End If
         Con.Close()
+        clrall()
 
     End Sub
 
@@ -31,4 +32,12 @@ Public Class NewUser
         Application.Exit()
 
     End Sub
+    Public Function clrall()
+        Sid.Text = ""
+        SName.Text = ""
+        SAddress.Text = ""
+        SUname.Text = ""
+        Spassword.Text = ""
+        Srole.Text = ""
+    End Function
 End Class

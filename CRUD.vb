@@ -14,6 +14,8 @@ Public Class crud
     'conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearchAll.Click
+        clrall()
+
         Datashow()
 
     End Sub
@@ -25,6 +27,7 @@ Public Class crud
         'Dim da As New OleDbDataAdapter
         'Dim strqry As String
         'conn.ConnectionString = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Lenovo\OneDrive\Desktop\MovieDb.accdb; Persist Security Info=False")
+        clrall()
 
         strqry = "delete * from Userinfo where UserName='" & Cusername.Text & "' "
         Try
@@ -79,6 +82,8 @@ Public Class crud
             pass = myreader("Password")
             If Uname = Cusername.Text Then
                 Panel1.Show()
+                Label1.Show()
+                Button2.Show()
 
                 conn.Close()
 
@@ -101,22 +106,7 @@ Public Class crud
     End Sub
 
     Private Sub BtnSrch_Click(sender As Object, e As EventArgs) Handles BtnSrch.Click
-        'Try
-        '    Dim dt As New DataTable
-        '    Dim ds As New DataSet
-        '    ds.Tables.Add(dt)
-        '    Dim da As New OleDbDataAdapter
-        '    conn.Open()
-        '    strqry = "select * from UserInfo where UserName='" & Cusername.Text & "' "
-        '    da = New OleDbDataAdapter(strqry, conn)
-        '    da.Fill(dt)
-        '    DataGridView1.DataSource = dt.DefaultView
-        '    conn.Close()
-        '    'Cusername.Text = ""
-        '    'Cusername.Text = ""
-        'Catch ex As Exception
-        '    MsgBox("No Data Found", MsgBoxStyle.Critical)
-        'End Try
+        clrall()
         conn.Open()
         Dim myreader As OleDbDataReader
         strqry = "select * from UserInfo where UserName='" & Cusername.Text & "'"
@@ -130,6 +120,8 @@ Public Class crud
         Spassword.Text = myreader("Password")
         Srole.Text = myreader("Role")
         Panel1.Show()
+        Label1.Hide()
+        Button2.Hide()
         conn.Close()
     End Sub
 
@@ -157,6 +149,14 @@ Public Class crud
         Application.Exit()
 
     End Sub
+    Public Function clrall()
+        Sid.Text = ""
+        SName.Text = ""
+        SAddress.Text = ""
+        SUname.Text = ""
+        Spassword.Text = ""
+        Srole.Text = ""
+    End Function
 
 
 End Class

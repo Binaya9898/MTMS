@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.OleDb.OleDbDataReader
 Imports Graphics.IO
+Imports System.Drawing.Printing
 Public Class Seats
 
     Dim cmd As OleDbCommand
@@ -86,6 +87,8 @@ Public Class Seats
         cmd.ExecuteNonQuery()
         conn.Close()
         A1.BackColor = Color.Green
+        A1.Enabled = True
+
         A2.BackColor = Color.Green
         A3.BackColor = Color.Green
         A4.BackColor = Color.Green
@@ -101,14 +104,29 @@ Public Class Seats
         D2.BackColor = Color.Green
         D3.BackColor = Color.Green
         D4.BackColor = Color.Green
+        A2.Enabled = True
+        A3.Enabled = True
+        A4.Enabled = True
+        B1.Enabled = True
+        B2.Enabled = True
+        B3.Enabled = True
+        B4.Enabled = True
+        C1.Enabled = True
+        C2.Enabled = True
+        C3.Enabled = True
+        C4.Enabled = True
+        D1.Enabled = True
+        D2.Enabled = True
+        D3.Enabled = True
+        D4.Enabled = True
         'MsgBox("Updated to 0")
 
     End Sub
+
     Public Sub changecolor()
         A1.BackColor = Color.Blue
 
     End Sub
-
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -116,6 +134,7 @@ Public Class Seats
         Dim a() As Integer
 
         conopen()
+        'conn.Open()
 
 
         Dim sql As String
@@ -128,14 +147,19 @@ Public Class Seats
         Dim seatid As String
 
         seatstat = myreader("SeatStatus")
-        If seatstat = 1 Then
-            A1.BackColor = Color.Red
-        Else
+        If seatstat = 0 Then
             A1.BackColor = Color.Green
+            'A1.Enabled = False
+        Else
+
+            A1.BackColor = Color.Red
+            A1.Enabled = False
         End If
 
 
         Dim sql2 As String
+        conopen()
+
         sql2 = "select * from Seatinfo where SeatId=2"
         Dim cmd2 As New OleDbCommand(sql2, conn)
         Dim myreader2 As OleDbDataReader
@@ -145,10 +169,13 @@ Public Class Seats
         Dim seatid2 As String
 
         seatstat2 = myreader2("SeatStatus")
-        If seatstat2 = 1 Then
-            A2.BackColor = Color.Red
-        Else
+        If seatstat2 = 0 Then
             A2.BackColor = Color.Green
+            'A1.Enabled = False
+        Else
+
+            A2.BackColor = Color.Red
+            A2.Enabled = False
         End If
 
 
@@ -163,10 +190,13 @@ Public Class Seats
         Dim seatid3 As String
 
         seatstat3 = myreader3("SeatStatus")
-        If seatstat3 = 1 Then
-            A3.BackColor = Color.Red
-        Else
+        If seatstat3 = 0 Then
             A3.BackColor = Color.Green
+            'A1.Enabled = False
+        Else
+
+            A3.BackColor = Color.Red
+            A3.Enabled = False
         End If
 
 
@@ -180,10 +210,13 @@ Public Class Seats
         Dim seatstat4 As Integer
         Dim seatid4 As String
         seatstat4 = myreader4("SeatStatus")
-        If seatstat4 = 1 Then
-            A4.BackColor = Color.Red
-        Else
+        If seatstat4 = 0 Then
             A4.BackColor = Color.Green
+            'A1.Enabled = False
+        Else
+
+            A4.BackColor = Color.Red
+            A4.Enabled = False
         End If
 
 
@@ -196,10 +229,12 @@ Public Class Seats
         Dim seatstat5 As Integer
         Dim seatid5 As String
         seatstat5 = myreader5("SeatStatus")
-        If seatstat5 = 1 Then
-            B1.BackColor = Color.Red
-        Else
+        If seatstat5 = 0 Then
             B1.BackColor = Color.Green
+        Else
+            B1.BackColor = Color.Red
+            B1.Enabled = False
+
         End If
 
 
@@ -213,11 +248,14 @@ Public Class Seats
         Dim seatstat6 As Integer
         Dim seatid6 As String
         seatstat6 = myreader6("SeatStatus")
-        If seatstat6 = 1 Then
-            B2.BackColor = Color.Red
-        Else
+        If seatstat6 = 0 Then
             B2.BackColor = Color.Green
+        Else
+            B2.BackColor = Color.Red
+            B2.Enabled = False
+
         End If
+
 
 
 
@@ -230,11 +268,14 @@ Public Class Seats
         Dim seatstat7 As Integer
         Dim seatid7 As String
         seatstat7 = myreader7("SeatStatus")
-        If seatstat7 = 1 Then
-            B3.BackColor = Color.Red
-        Else
+        If seatstat7 = 0 Then
             B3.BackColor = Color.Green
+        Else
+            B3.BackColor = Color.Red
+            B3.Enabled = False
+
         End If
+
 
 
 
@@ -247,11 +288,14 @@ Public Class Seats
         Dim seatstat8 As Integer
         Dim seatid8 As String
         seatstat8 = myreader8("SeatStatus")
-        If seatstat8 = 1 Then
-            B4.BackColor = Color.Red
-        Else
+        If seatstat8 = 0 Then
             B4.BackColor = Color.Green
+        Else
+            B4.BackColor = Color.Red
+            B4.Enabled = False
+
         End If
+
 
 
         Dim sql9 As String
@@ -263,11 +307,14 @@ Public Class Seats
         Dim seatstat9 As Integer
         Dim seatid9 As String
         seatstat9 = myreader9("SeatStatus")
-        If seatstat9 = 1 Then
-            C1.BackColor = Color.Red
-        Else
+        If seatstat9 = 0 Then
             C1.BackColor = Color.Green
+        Else
+            C1.BackColor = Color.Red
+            C1.Enabled = False
+
         End If
+
 
 
         Dim sql10 As String
@@ -279,11 +326,14 @@ Public Class Seats
         Dim seatstat10 As Integer
         Dim seatid10 As String
         seatstat10 = myreader10("SeatStatus")
-        If seatstat10 = 1 Then
-            C2.BackColor = Color.Red
-        Else
+        If seatstat10 = 0 Then
             C2.BackColor = Color.Green
+        Else
+            C2.BackColor = Color.Red
+            C2.Enabled = False
+
         End If
+
 
 
 
@@ -296,11 +346,14 @@ Public Class Seats
         Dim seatstat11 As Integer
         Dim seatid11 As String
         seatstat11 = myreader11("SeatStatus")
-        If seatstat11 = 1 Then
-            C3.BackColor = Color.Red
-        Else
+        If seatstat11 = 0 Then
             C3.BackColor = Color.Green
+        Else
+            C3.BackColor = Color.Red
+            C3.Enabled = False
+
         End If
+
 
 
 
@@ -313,11 +366,14 @@ Public Class Seats
         Dim seatstat12 As Integer
         Dim seatid12 As String
         seatstat12 = myreader12("SeatStatus")
-        If seatstat12 = 1 Then
-            C4.BackColor = Color.Red
-        Else
+        If seatstat12 = 0 Then
             C4.BackColor = Color.Green
+        Else
+            C4.BackColor = Color.Red
+            C4.Enabled = False
+
         End If
+
 
 
         Dim sql13 As String
@@ -329,11 +385,14 @@ Public Class Seats
         Dim seatstat13 As Integer
         Dim seatid13 As String
         seatstat13 = myreader13("SeatStatus")
-        If seatstat13 = 1 Then
-            D1.BackColor = Color.Red
-        Else
+        If seatstat13 = 0 Then
             D1.BackColor = Color.Green
+        Else
+            D1.BackColor = Color.Red
+            D1.Enabled = False
+
         End If
+
 
 
         Dim sql14 As String
@@ -345,11 +404,14 @@ Public Class Seats
         Dim seatstat14 As Integer
         Dim seatid14 As String
         seatstat14 = myreader14("SeatStatus")
-        If seatstat14 = 1 Then
-            D2.BackColor = Color.Red
-        Else
+        If seatstat14 = 0 Then
             D2.BackColor = Color.Green
+        Else
+            D3.BackColor = Color.Red
+            D3.Enabled = False
+
         End If
+
 
 
 
@@ -362,11 +424,14 @@ Public Class Seats
         Dim seatstat15 As Integer
         Dim seatid15 As String
         seatstat15 = myreader15("SeatStatus")
-        If seatstat15 = 1 Then
-            D3.BackColor = Color.Red
-        Else
+        If seatstat15 = 0 Then
             D3.BackColor = Color.Green
+        Else
+            D3.BackColor = Color.Red
+            D3.Enabled = False
+
         End If
+
 
 
 
@@ -379,11 +444,14 @@ Public Class Seats
         Dim seatstat16 As Integer
         Dim seatid16 As String
         seatstat16 = myreader16("SeatStatus")
-        If seatstat16 = 1 Then
-            D4.BackColor = Color.Red
-        Else
+        If seatstat16 = 0 Then
             D4.BackColor = Color.Green
+        Else
+            D4.BackColor = Color.Red
+            D4.Enabled = False
+
         End If
+
 
 
 
@@ -460,10 +528,16 @@ Public Class Seats
         TextBox2.Text = Form4.sharename
         TextBox3.Text = price1
         TextBox4.Text = [stname]
+        TextBox5.Text = Form4.sharetime
         TextBox6.Text = price1 * 0.1
         TextBox7.Text = price1 + TextBox6.Text
 
+        'Tmname, Tcnme, Tstime, Tdate, Tstnum
+        Tmname = TextBox2.Text
 
+        Tstime = TextBox5.Text
+        Tstnum = TextBox4.Text
+        Tamt = TextBox7.Text
 
     End Sub
     Public Sub ClearTIcket()
@@ -471,6 +545,7 @@ Public Class Seats
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
+        TextBox5.Text = ""
         TextBox6.Text = ""
         TextBox7.Text = ""
     End Sub
@@ -572,7 +647,7 @@ Public Class Seats
         FillTicket(16)
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(sender As Object, e As Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Drawing.Printing.PrintPageEventArgs)
         'e.Graphics.DrawString("DPS MINIMART", New Font("Segoe UI", 22), Brushes.Red, 350, 45)
         'e.Graphics.DrawString("**BILL**", New Font("Segoe UI", 22), Brushes.Red, 385, 80)
         'Dim bm As New Bitmap(Me.TextBox2, Me.TextBox2.Height)
@@ -583,9 +658,46 @@ Public Class Seats
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        'Me.PrintDocument1.PrintAction = Printing.PrintAction.PrintToPreview
+        PrintDocument1.Print()
     End Sub
 
+
+
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Form3.Show()
+    End Sub
+
+    Private Sub IconButton25_Click(sender As Object, e As EventArgs) Handles IconButton25.Click
+        Me.Hide()
+        Form4.Show()
+    End Sub
+
+    Private Sub IconButton26_Click(sender As Object, e As EventArgs) Handles IconButton26.Click
+        Application.Exit()
+
+    End Sub
+    Public Tmname, Tstime, Tdate, Tstnum, Tamt As String
+
+
+    Private Sub PrintDocument1_PrintPage_1(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        e.Graphics.DrawString("QFX Pokhara", New Font("Segoe UI", 38), Brushes.Blue, 50, 45)
+        'e.Graphics.DrawString("DPS MINIMART", New Font("Segoe UI", 22), Brushes.Red, 350, 45)
+        e.Graphics.DrawString("Movie Ticket", New Font("Segoe UI", 28), Brushes.Blue, 50, 110)
+        'e.Graphics.DrawString("DPS MINIMART", New Font("Segoe UI", 22), Brushes.Red, 350, 45)
+        e.Graphics.DrawString("Movie Name :  " + Tmname, New Font("Segoe UI", 22), Brushes.Blue, 50, 180)
+        e.Graphics.DrawString("Seat Number :  " + Tstnum, New Font("Segoe UI", 22), Brushes.Blue, 50, 220)
+        e.Graphics.DrawString("Show Time   :" + Tstime, New Font("Segoe UI", 22), Brushes.Blue, 50, 260)
+        'e.Graphics.DrawString(" " + Tstime, New Font("Segoe UI", 22), Brushes.Red, 350, 180)
+        e.Graphics.DrawString("Total Amount :  " + Tamt, New Font("Segoe UI", 22), Brushes.Blue, 50, 300)
+
+
+
 
     End Sub
 End Class

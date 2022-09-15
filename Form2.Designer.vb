@@ -167,7 +167,7 @@ Partial Class NewUser
         '
         Me.Srole.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Srole.FormattingEnabled = True
-        Me.Srole.Items.AddRange(New Object() {"Admin", " User"})
+        Me.Srole.Items.AddRange(New Object() {"Admin", "User"})
         Me.Srole.Location = New System.Drawing.Point(261, 576)
         Me.Srole.Name = "Srole"
         Me.Srole.Size = New System.Drawing.Size(351, 36)

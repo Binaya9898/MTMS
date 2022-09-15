@@ -22,12 +22,12 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Wmname = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Emname = New System.Windows.Forms.Label()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -36,6 +36,7 @@ Partial Class Form4
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,11 +45,11 @@ Partial Class Form4
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Panel1.Controls.Add(Me.Wmname)
+        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Emname)
         Me.Panel1.Controls.Add(Me.IconButton3)
         Me.Panel1.Controls.Add(Me.IconButton2)
-        Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -63,23 +64,27 @@ Partial Class Form4
         Me.Panel1.Size = New System.Drawing.Size(1580, 814)
         Me.Panel1.TabIndex = 0
         '
-        'Wmname
+        'Label4
         '
-        Me.Wmname.AutoSize = True
-        Me.Wmname.Location = New System.Drawing.Point(1072, 653)
-        Me.Wmname.Name = "Wmname"
-        Me.Wmname.Size = New System.Drawing.Size(74, 28)
-        Me.Wmname.TabIndex = 22
-        Me.Wmname.Text = "Label5"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.ForeColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.Label4.Location = New System.Drawing.Point(878, 660)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(244, 50)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Movie Name"
         '
         'Emname
         '
         Me.Emname.AutoSize = True
-        Me.Emname.Location = New System.Drawing.Point(264, 653)
+        Me.Emname.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Emname.ForeColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.Emname.Location = New System.Drawing.Point(280, 671)
         Me.Emname.Name = "Emname"
-        Me.Emname.Size = New System.Drawing.Size(74, 28)
+        Me.Emname.Size = New System.Drawing.Size(244, 50)
         Me.Emname.TabIndex = 21
-        Me.Emname.Text = "Label4"
+        Me.Emname.Text = "Movie Name"
         '
         'IconButton3
         '
@@ -108,22 +113,11 @@ Partial Class Form4
         Me.IconButton2.TabIndex = 19
         Me.IconButton2.UseVisualStyleBackColor = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button4.Location = New System.Drawing.Point(1121, 723)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(145, 46)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "Book Now"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.Location = New System.Drawing.Point(287, 723)
+        Me.Button3.Location = New System.Drawing.Point(418, 737)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(145, 46)
         Me.Button3.TabIndex = 6
@@ -136,7 +130,7 @@ Partial Class Form4
         Me.Label3.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label3.Location = New System.Drawing.Point(1009, 207)
+        Me.Label3.Location = New System.Drawing.Point(796, 147)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(204, 54)
         Me.Label3.TabIndex = 5
@@ -148,7 +142,7 @@ Partial Class Form4
         Me.Label2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(236, 207)
+        Me.Label2.Location = New System.Drawing.Point(186, 138)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(186, 54)
         Me.Label2.TabIndex = 4
@@ -158,7 +152,7 @@ Partial Class Form4
         '
         Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(964, 723)
+        Me.Button2.Location = New System.Drawing.Point(855, 737)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(145, 46)
         Me.Button2.TabIndex = 3
@@ -169,9 +163,11 @@ Partial Class Form4
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.LightGreen
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox2.Location = New System.Drawing.Point(881, 275)
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(796, 195)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(442, 351)
+        Me.PictureBox2.Size = New System.Drawing.Size(442, 461)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
@@ -179,7 +175,7 @@ Partial Class Form4
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(136, 723)
+        Me.Button1.Location = New System.Drawing.Point(246, 737)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(145, 46)
         Me.Button1.TabIndex = 2
@@ -190,9 +186,11 @@ Partial Class Form4
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.LightGreen
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(101, 275)
+        Me.PictureBox1.Image = Global.Movie_Ticket_Management_System.My.Resources.Resources.loki
+        Me.PictureBox1.Location = New System.Drawing.Point(186, 195)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(452, 351)
+        Me.PictureBox1.Size = New System.Drawing.Size(452, 461)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -201,18 +199,29 @@ Partial Class Form4
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Label1.Font = New System.Drawing.Font("Harrington", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.GreenYellow
-        Me.Label1.Location = New System.Drawing.Point(236, 32)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(236, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(1030, 94)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Welcome To Ticket Booking"
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button5.Location = New System.Drawing.Point(1028, 737)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(145, 46)
+        Me.Button5.TabIndex = 24
+        Me.Button5.Text = "Details"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.GreenYellow
+        Me.BackColor = System.Drawing.Color.Ivory
         Me.ClientSize = New System.Drawing.Size(1591, 825)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -235,10 +244,10 @@ Partial Class Form4
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Wmname As Label
     Friend WithEvents Emname As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button5 As Button
 End Class

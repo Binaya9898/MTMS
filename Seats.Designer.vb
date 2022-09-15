@@ -24,9 +24,13 @@ Partial Class Seats
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Seats))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.IconButton26 = New FontAwesome.Sharp.IconButton()
+        Me.clrbtn = New System.Windows.Forms.Button()
         Me.IconButton25 = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -45,9 +49,7 @@ Partial Class Seats
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.D4 = New FontAwesome.Sharp.IconButton()
-        Me.clrbtn = New System.Windows.Forms.Button()
         Me.C4 = New FontAwesome.Sharp.IconButton()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.B4 = New FontAwesome.Sharp.IconButton()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.A4 = New FontAwesome.Sharp.IconButton()
@@ -73,6 +75,7 @@ Partial Class Seats
         Me.A2 = New FontAwesome.Sharp.IconButton()
         Me.A1 = New FontAwesome.Sharp.IconButton()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -83,7 +86,9 @@ Partial Class Seats
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Crimson
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.IconButton26)
+        Me.Panel1.Controls.Add(Me.clrbtn)
         Me.Panel1.Controls.Add(Me.IconButton25)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -91,6 +96,18 @@ Partial Class Seats
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1540, 861)
         Me.Panel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Crimson
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(1050, 743)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(313, 54)
+        Me.Button1.TabIndex = 41
+        Me.Button1.Text = "Payment Option"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'IconButton26
         '
@@ -104,6 +121,18 @@ Partial Class Seats
         Me.IconButton26.Size = New System.Drawing.Size(70, 60)
         Me.IconButton26.TabIndex = 13
         Me.IconButton26.UseVisualStyleBackColor = False
+        '
+        'clrbtn
+        '
+        Me.clrbtn.BackColor = System.Drawing.Color.Crimson
+        Me.clrbtn.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.clrbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.clrbtn.Location = New System.Drawing.Point(245, 732)
+        Me.clrbtn.Name = "clrbtn"
+        Me.clrbtn.Size = New System.Drawing.Size(192, 54)
+        Me.clrbtn.TabIndex = 40
+        Me.clrbtn.Text = "Clear All"
+        Me.clrbtn.UseVisualStyleBackColor = False
         '
         'IconButton25
         '
@@ -122,6 +151,8 @@ Partial Class Seats
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LavenderBlush
+        Me.Panel3.Controls.Add(Me.TextBox5)
+        Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.DateTimePicker1)
         Me.Panel3.Controls.Add(Me.TextBox7)
         Me.Panel3.Controls.Add(Me.TextBox6)
@@ -138,10 +169,29 @@ Partial Class Seats
         Me.Panel3.Controls.Add(Me.Label18)
         Me.Panel3.Controls.Add(Me.Label17)
         Me.Panel3.Controls.Add(Me.Label16)
-        Me.Panel3.Location = New System.Drawing.Point(883, 78)
+        Me.Panel3.Location = New System.Drawing.Point(895, 81)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(625, 699)
+        Me.Panel3.Size = New System.Drawing.Size(625, 659)
         Me.Panel3.TabIndex = 1
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.Azure
+        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TextBox5.Location = New System.Drawing.Point(209, 347)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(398, 34)
+        Me.TextBox5.TabIndex = 19
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(45, 344)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(140, 31)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Show Time :"
         '
         'DateTimePicker1
         '
@@ -154,7 +204,7 @@ Partial Class Seats
         '
         Me.TextBox7.BackColor = System.Drawing.Color.Azure
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox7.Location = New System.Drawing.Point(251, 485)
+        Me.TextBox7.Location = New System.Drawing.Point(255, 531)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(302, 34)
         Me.TextBox7.TabIndex = 16
@@ -163,7 +213,7 @@ Partial Class Seats
         '
         Me.TextBox6.BackColor = System.Drawing.Color.Azure
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox6.Location = New System.Drawing.Point(209, 398)
+        Me.TextBox6.Location = New System.Drawing.Point(213, 444)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(302, 34)
         Me.TextBox6.TabIndex = 15
@@ -172,7 +222,7 @@ Partial Class Seats
         '
         Me.TextBox3.BackColor = System.Drawing.Color.Azure
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox3.Location = New System.Drawing.Point(217, 341)
+        Me.TextBox3.Location = New System.Drawing.Point(221, 387)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(302, 34)
         Me.TextBox3.TabIndex = 13
@@ -208,9 +258,9 @@ Partial Class Seats
         '
         Me.Button3.BackColor = System.Drawing.Color.Pink
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.Location = New System.Drawing.Point(209, 633)
+        Me.Button3.Location = New System.Drawing.Point(246, 608)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(111, 54)
+        Me.Button3.Size = New System.Drawing.Size(111, 48)
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Print"
         Me.Button3.UseVisualStyleBackColor = False
@@ -219,7 +269,7 @@ Partial Class Seats
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label24.Location = New System.Drawing.Point(41, 486)
+        Me.Label24.Location = New System.Drawing.Point(45, 532)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(166, 31)
         Me.Label24.TabIndex = 8
@@ -229,7 +279,7 @@ Partial Class Seats
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label23.Location = New System.Drawing.Point(41, 417)
+        Me.Label23.Location = New System.Drawing.Point(45, 463)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(150, 31)
         Me.Label23.TabIndex = 7
@@ -239,7 +289,7 @@ Partial Class Seats
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label21.Location = New System.Drawing.Point(41, 352)
+        Me.Label21.Location = New System.Drawing.Point(45, 398)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(132, 31)
         Me.Label21.TabIndex = 5
@@ -299,9 +349,7 @@ Partial Class Seats
         '
         Me.Panel2.BackColor = System.Drawing.Color.Pink
         Me.Panel2.Controls.Add(Me.D4)
-        Me.Panel2.Controls.Add(Me.clrbtn)
         Me.Panel2.Controls.Add(Me.C4)
-        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.B4)
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.A4)
@@ -327,7 +375,7 @@ Partial Class Seats
         Me.Panel2.Controls.Add(Me.A1)
         Me.Panel2.Location = New System.Drawing.Point(14, 78)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(791, 699)
+        Me.Panel2.Size = New System.Drawing.Size(697, 648)
         Me.Panel2.TabIndex = 0
         '
         'D4
@@ -343,18 +391,6 @@ Partial Class Seats
         Me.D4.TabIndex = 15
         Me.D4.UseVisualStyleBackColor = False
         '
-        'clrbtn
-        '
-        Me.clrbtn.BackColor = System.Drawing.Color.Crimson
-        Me.clrbtn.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.clrbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.clrbtn.Location = New System.Drawing.Point(490, 633)
-        Me.clrbtn.Name = "clrbtn"
-        Me.clrbtn.Size = New System.Drawing.Size(192, 54)
-        Me.clrbtn.TabIndex = 40
-        Me.clrbtn.Text = "Clear All"
-        Me.clrbtn.UseVisualStyleBackColor = False
-        '
         'C4
         '
         Me.C4.BackColor = System.Drawing.Color.Pink
@@ -367,18 +403,6 @@ Partial Class Seats
         Me.C4.Size = New System.Drawing.Size(86, 81)
         Me.C4.TabIndex = 14
         Me.C4.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.ForestGreen
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.Location = New System.Drawing.Point(97, 633)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(192, 54)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "Confirm"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'B4
         '
@@ -673,6 +697,10 @@ Partial Class Seats
         'PrintDocument1
         '
         '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
         'PrintPreviewDialog1
         '
         Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -687,7 +715,7 @@ Partial Class Seats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1542, 792)
+        Me.ClientSize = New System.Drawing.Size(1542, 837)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Seats"
@@ -729,7 +757,6 @@ Partial Class Seats
     Friend WithEvents A2 As FontAwesome.Sharp.IconButton
     Friend WithEvents A1 As FontAwesome.Sharp.IconButton
     Friend WithEvents clrbtn As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
@@ -752,6 +779,10 @@ Partial Class Seats
     Friend WithEvents B4 As FontAwesome.Sharp.IconButton
     Friend WithEvents A4 As FontAwesome.Sharp.IconButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
     Friend WithEvents PrintDocument1 As Drawing.Printing.PrintDocument
+    Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
 End Class
